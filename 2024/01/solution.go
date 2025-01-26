@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"slices"
+	"succoDiPompelmo/adventOfGo/helpers"
 )
 
 // PartOne solves the first problem of day 1 of Advent of Code 2024.

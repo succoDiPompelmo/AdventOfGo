@@ -8,7 +8,7 @@ import (
 )
 
 func ExamplePartOne() {
-	file, err := os.Open("testdata/input.txt")
+	file, err := os.Open("testdata/full_input.txt")
 	if err != nil {
 		log.Fatalf("could not open input file: %v", err)
 	}
@@ -17,11 +17,11 @@ func ExamplePartOne() {
 	if err := PartOne(file, os.Stdout); err != nil {
 		log.Fatalf("could not solve: %v", err)
 	}
-	// Output: 1506483
+	// Output: 1341714
 }
 
 func ExamplePartTwo() {
-	file, err := os.Open("testdata/input.txt")
+	file, err := os.Open("testdata/full_input.txt")
 	if err != nil {
 		log.Fatalf("could open input file: %v", err)
 	}
@@ -30,7 +30,7 @@ func ExamplePartTwo() {
 	if err := PartTwo(file, os.Stdout); err != nil {
 		log.Fatalf("could not solve: %v", err)
 	}
-	// Output: 23126924
+	// Output: 27384707
 }
 
 func Benchmark(b *testing.B) {
@@ -40,12 +40,12 @@ func Benchmark(b *testing.B) {
 	}{
 		"PartOne": {
 			solution:  helpers.SolutionFunc(PartOne),
-			inputFile: "testdata/input.txt",
+			inputFile: "testdata/full_input.txt",
 		},
 
 		"PartTwo": {
 			solution:  helpers.SolutionFunc(PartTwo),
-			inputFile: "testdata/input.txt",
+			inputFile: "testdata/full_input.txt",
 		},
 	}
 
